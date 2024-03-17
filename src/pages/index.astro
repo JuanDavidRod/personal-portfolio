@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
+import About from '../components/About.astro'
+import Experience from '../components/Experience.astro'
+import Proyects from '../components/Proyects.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -27,65 +30,15 @@ import Header from '../components/Header.astro'
     </div>
 
     <div class="mt-20">
-      <h1 class="text-4xl font-semibold">Acerca de mi</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium
-        consequat. Nibh sem ut in magna suspendisse. Morbi egestas sed nec
-        congue mattis nibh. Ultrices leo vitae neque vestibulum in ultricies
-        auctor. Purus et arcu ridiculus tristique massa. Ipsum ante ut est
-        feugiat donec scelerisque et. Risus fames luctus suspendisse suscipit.
-        Neque nisl arcu massa orci. Nisl vulputate nulla lorem nulla faucibus
-        quam eu. Blandit lorem elementum eget ultricies adipiscing. Est a
-        feugiat non euismod interdum proin risus malesuada.
-      </p>
+      <About />
     </div>
 
     <div class="mt-20">
-      <h1 class="text-4xl font-semibold">Experiencia</h1>
-      <ul class="my-5">
-        <li>Indra Company - Software Engineer/ Desarrollador React</li>
-        <li>Indra Company - Software Engineer/ Desarrollador React Native</li>
-        <li>Agencia Droi S.A.S - Lider de equipo de desarrollo</li>
-        <li>Agencia Droi S.A.S - Desarrollador fullStack</li>
-      </ul>
+      <Experience />
     </div>
 
     <div class="mt-20">
-      <h1 class="text-4xl font-semibold">Proyectos</h1>
-      <div class="grid grid-cols-1 gap-5 bg-slate-700 p-5 mt-5">
-        <div class="bg-slate-900 p-8">
-          <img class="aspect-square w-64 m-auto" src="" alt="" />
-          <h5>Proyecto 1</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium
-            consequat. Nibh sem ut in magna suspendisse.
-          </p>
-        </div>
-        <div class="bg-slate-900 p-8">
-          <img class="aspect-square w-64 m-auto" src="" alt="" />
-          <h5>Proyecto 1</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium
-            consequat. Nibh sem ut in magna suspendisse.
-          </p>
-        </div>
-        <div class="bg-slate-900 p-8">
-          <img class="aspect-square w-64 m-auto" src="" alt="" />
-          <h5>Proyecto 1</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium
-            consequat. Nibh sem ut in magna suspendisse.
-          </p>
-        </div>
-        <div class="bg-slate-900 p-8">
-          <img class="aspect-square w-64 m-auto" src="" alt="" />
-          <h5>Proyecto 1</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium
-            consequat. Nibh sem ut in magna suspendisse.
-          </p>
-        </div>
-      </div>
+      <Proyects />
     </div>
   </main>
 </Layout>
