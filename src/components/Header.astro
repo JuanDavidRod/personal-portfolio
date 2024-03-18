@@ -1,11 +1,9 @@
 <header>
-  <nav>
+  <nav class="fixed left-[50%]">
     <ul
-      class="bg-white flex mt-8 mx-auto rounded-2xl justify-center items-center gap-8 font-bold text-lg w-[450px] py-2 text-black"
+      class="bg-gradient-to-r from-[#E03C47] from-0% via-[#AB35A0] via-15% to-[#8222A5] to-100%
+      flex mt-8 rounded-2xl justify-center items-center gap-20 font-semibold text-xl w-[700px] py-3 text-white"
     >
-      <li>
-        <div class="h-8 w-8 bg-black rounded-full"></div>
-      </li>
       <li class="divider">Experiencia</li>
       <li class="divider">Proyectos</li>
       <li>Contacto</li>
@@ -13,16 +11,22 @@
   </nav>
 </header>
 <style>
+  nav {
+    transform: translateX(-50%);
+  }
+  ul {
+    box-shadow: 4px 4px 20px 0px #0f10128c;
+  }
   ul > li {
     position: relative;
   }
   ul > li.divider::after {
     content: '';
-    border: solid 1px black;
+    border: solid 1px white;
     border-radius: 100%;
     position: absolute;
     height: 18px;
     top: 5px;
-    left: 115%;
+    left: 135%;
   }
 </style>
