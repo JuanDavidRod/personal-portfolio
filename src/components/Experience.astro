@@ -1,57 +1,57 @@
 ---
-import InfoBox from './ui/InfoBox.astro'
+import InfoBox from './ui/InfoExperienceCard.astro'
+
+const dataJobs = [
+  {
+    date: 'Enero/2024 - Presente',
+    description:
+      'Actualmente, trabajo en el desarrollo de portales internos para Movistar Ecuador. He realizado la creación de una plataforma con las últimas tecnologías, mejorando el rendimiento y la usabilidad del portal.',
+    nameCompany: 'INDRA COMPANY',
+    position: 'Software Engineer',
+    subPosition: 'Desarrollador React',
+  },
+  {
+    date: 'Diciembre/23 - Noviembre/22',
+    description:
+      'Participé en el desarrollo de la aplicación móvil de Colsanitas para Colombia, logrando reducir significativamente los tiempos de ingreso al acceder al módulo de centro médico virtual.',
+    nameCompany: 'INDRA COMPANY',
+    position: 'Software Engineer',
+    subPosition: 'Desarrollador React Native',
+  },
+  {
+    date: 'Junio/21 - Noviembre/22',
+    description:
+      'Participé en el desarrollo de aplicaciones para empresas privadas y públicas, implementando metodologías para mejorar el área de desarrollo y la calidad del software.',
+    nameCompany: 'AGENCIA DROI',
+    position: 'Lider Tecnico',
+    subPosition: 'Lider tecnico del equipo de desarrollo',
+  },
+  {
+    date: 'Septiembre/18 - Junio/21',
+    description:
+      'Participé en el desarrollo del producto principal de la empresa, implementando nuevas tecnologías y buenas prácticas de programación para mejorar su calidad y funcionalidad.',
+    nameCompany: 'AGENCIA DROI',
+    position: 'Desarrollador de Software',
+    subPosition: 'Desarrollador FullStack',
+  },
+]
 ---
 
 <h1 class="text-6xl font-semibold mb-16">Experiencia</h1>
 <div class="my-5">
-  <InfoBox />
-  <InfoBox />
-  <InfoBox />
-  <InfoBox />
-
-  <!-- <li class="flex gap-10">
-    <div class="flex-1 flex flex-col">
-      <h4 class="text-2xl">
-        Software Engineer |
-        <span class="font-bold">INDRA COMPANY</span>
-      </h4>
-      <span class="text-sm font-bold text-zinc-600"
-        >Desarrollador React Native</span
-      >
-      <span class="text-sm text-zinc-600">Diciembre/23 - Noviembre/22</span>
-      <p>
-        Participe en el desarrollo de la aplicación móvil de Colsanitas para
-        Colombia. Pude reducir los tiempos de ingreso al acceder en el modulo de
-        centro medico virtual.
-      </p>
-    </div>
-  </li>
-  <li class="flex gap-10">
-    <div class="flex-1">
-      <h4 class="text-2xl">
-        Lider de equipo de desarrollo |
-        <span class="font-bold">DROI</span>
-      </h4>
-      <span class="text-sm text-zinc-600">Junio/21 - Noviembre/22</span>
-      <p>
-        Participe en el desarrollo de aplicativos para empresas privadas y
-        publicas. Implemente metodologias para mejorar el area de desarrollo
-        mejorando la calidad software.
-      </p>
-    </div>
-  </li>
-  <li class="flex gap-10">
-    <div class="flex-1">
-      <h4 class="text-2xl">
-        Desarrollador FullStack |
-        <span class="font-bold">DROI</span>
-      </h4>
-      <span class="text-sm text-zinc-600"> Septiembre/18 - Junio/21</span>
-      <p>
-        Participe en el desarrollo del producto principal de la empresa.
-        Implementando nuevas tecnologias y el uso de buenas practicas de
-        programacion para mejorar el producto principal de la empresa.
-      </p>
-    </div>
-  </li> -->
+  {
+    dataJobs.map(
+      ({ date, description, nameCompany, position, subPosition }) => {
+        return (
+          <InfoBox
+            date={date}
+            description={description}
+            nameCompany={nameCompany}
+            position={position}
+            subPosition={subPosition}
+          />
+        )
+      }
+    )
+  }
 </div>
