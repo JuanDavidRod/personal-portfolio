@@ -3,47 +3,74 @@ import ProyectCard from '../components/ui/ProyectCard.astro'
 
 const dataProyects = [
   {
-    name: 'Gesadmin',
-    description:
-      'Gesadmin es un gestor administrativo para ayudar a pequeñas y medianas empresas a tener un mejor control de su negocio.',
-    participation:
-      'Participe en la mejora de rendimiento del proyecto usando optimizaciones en base de datos y en codigo nativo, llevando buenas practicas de programación.',
-  },
-  {
     name: 'App Colsanitas',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium consequat. Nibh sem ut in magna suspendisse.',
+      'La aplicación Colsanitas fue desarrollada para ayudar a los usuarios a agilizar trámites relacionados con su servicio de salud.',
     participation:
-      'Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium consequat. Nibh sem ut in magna suspendisse.',
+      'He participado en el desarrollo de la aplicación móvil de Colsanitas, donde contribuí a la migración de la aplicación a React Native 0.70 y al mejoramiento de los tiempos de acceso a Mi Salud Digital.',
+    image: 'colsanitas',
+    imageSize: 'mobile',
+    languages: ['React Native', 'TypeScript', 'Firebase'],
   },
   {
-    name: 'Probosques',
+    name: 'Weather APP',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium consequat. Nibh sem ut in magna suspendisse.',
+      'Weather APP es una aplicación diseñada para ofrecer información precisa sobre el estado del clima.',
     participation:
-      'Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium consequat. Nibh sem ut in magna suspendisse.',
+      'He participado activamente en la colaboración de este proyecto, buscando mejorar y fortalecer mis habilidades de desarrollo. A través de esta experiencia, he tenido la oportunidad de explorar y dominar nuevas tecnologías.',
+    image: 'weather',
+    imageSize: 'mobile',
+    languages: ['React JS', 'Vite', 'TypeScript', 'CSS'],
+  },
+  {
+    name: 'Calculadora BioFix',
+    description:
+      'Esta herramienta ha sido desarrollada con el propósito de calcular la huella de carbono producida tanto por empresas como por personas individuales.',
+    participation:
+      'He participado en el desarrollo completo de la página de BioFix, centrándome especialmente en la creación de la calculadora utilizando React para mejorar la experiencia del usuario.',
+    image: 'biofix',
+    imageSize: 'web',
+    languages: ['React JS', 'CSS'],
   },
   {
     name: 'Expo Bosques',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium consequat. Nibh sem ut in magna suspendisse.',
+      'Expo Bosques es una plataforma web y una aplicación móvil desarrollada para exhibir los proyectos llevados a cabo por el proyecto ProBosques.',
     participation:
-      'Lorem ipsum dolor sit amet consectetur. Lorem platea sed a pretium consequat. Nibh sem ut in magna suspendisse.',
+      'He sido parte del equipo de desarrollo de la plataforma web de Expo Bosques, garantizando su integración fluida con la aplicación móvil mediante la utilización de una API centralizada. Cumpliendo con las espectativas del cliente.',
+    image: 'expobosques',
+    imageSize: 'web',
+    languages: ['React Native', 'php', 'Slim', 'JavaScript', 'HTLM', 'CSS'],
+  },
+  {
+    name: 'Gesadmin',
+    description:
+      'Gesadmin es un gestor administrativo diseñado para asistir a pequeñas y medianas empresas en el control más efectivo de sus operaciones comerciales.',
+    participation:
+      'Contribuí a mejorar el rendimiento del proyecto mediante optimizaciones en la base de datos y en el código nativo, aplicando buenas prácticas de programación.',
+    image: 'gesadmin',
+    imageSize: 'web',
+    languages: ['php', 'MySql', 'CSS', 'HTML', 'JavaScript'],
   },
 ]
 ---
 
-<h1 class="text-6xl font-semibold">Proyectos</h1>
+<h1 class="text-5xl font-semibold">Proyectos</h1>
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 my-5">
   {
-    dataProyects.map(({ name, description, participation }) => {
-      return (
-        <ProyectCard
-          name={name}
-          description={description}
-          participation={participation}
-        />
-      )
-    })
+    dataProyects.map(
+      ({ name, description, participation, image, languages, imageSize }) => {
+        return (
+          <ProyectCard
+            name={name}
+            description={description}
+            participation={participation}
+            image={image}
+            languages={languages}
+            imageSize={imageSize}
+          />
+        )
+      }
+    )
   }
 </div>
