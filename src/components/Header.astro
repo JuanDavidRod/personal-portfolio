@@ -1,8 +1,8 @@
 <header>
   <nav class="fixed left-[50%] z-10">
     <ul
-      class="bg-gradient-to-r from-[#E03C47] from-0% via-[#AB35A0] via-15% to-[#8222A5] to-100%
-      flex mt-8 rounded-2xl justify-center items-center gap-20 font-semibold text-xl w-[700px] py-3 text-white"
+      class="w-[450px] md:w-[700px] flex gap-10 md:gap-20 mt-8 rounded-2xl justify-center items-center font-semibold text-lg md:text-xl py-3 text-white
+      bg-gradient-to-r from-[#E03C47] from-0% via-[#AB35A0] via-15% to-[#8222A5] to-100%"
     >
       <li class="divider">
         <a href="/#about">Acerca de mi</a>
@@ -34,5 +34,11 @@
     height: 18px;
     top: 5px;
     left: 135%;
+  }
+
+  @media (max-width: 640px) {
+    ul > li.divider::after {
+      display: none;
+    }
   }
 </style>
