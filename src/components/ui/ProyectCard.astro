@@ -20,7 +20,7 @@ const { name, description, participation, image, languages, imageSize } =
     {description}
   </p>
   <img
-    class={`aspect-video object-${imageSize === 'web' ? 'cover' : 'contain'} w-80 mx-auto my-6`}
+    class={`aspect-video object-contain w-80 mx-auto my-6`}
     src={`/img/${image}.png`}
     alt={`imagen proyecto ${name}`}
     loading="lazy"

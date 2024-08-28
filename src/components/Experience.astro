@@ -1,9 +1,9 @@
 ---
 import InfoBox from './ui/InfoExperienceCard.astro'
 
-const dataJobs = [
+const dataJobs = [ 
   {
-    date: 'Enero/2024 - Presente',
+    date: 'Ene 2024 - Presente',
     description:
       'Actualmente, trabajo en el desarrollo de portales internos para Movistar Ecuador. He realizado la creación de una plataforma con las últimas tecnologías, mejorando el rendimiento y la usabilidad del portal.',
     nameCompany: 'INDRA COMPANY',
@@ -11,7 +11,7 @@ const dataJobs = [
     subPosition: 'Desarrollador React',
   },
   {
-    date: 'Diciembre/23 - Noviembre/22',
+    date: 'Nov 2022 - Dic 2023',
     description:
       'Participé en el desarrollo de la aplicación móvil de Colsanitas para Colombia, logrando reducir significativamente los tiempos de ingreso al acceder al módulo de centro médico virtual.',
     nameCompany: 'INDRA COMPANY',
@@ -19,7 +19,7 @@ const dataJobs = [
     subPosition: 'Desarrollador React Native',
   },
   {
-    date: 'Junio/21 - Noviembre/22',
+    date: 'Jun 2021 - Nov 2022',
     description:
       'Participé en el desarrollo de aplicaciones para empresas privadas y públicas, implementando metodologías para mejorar el área de desarrollo y la calidad del software.',
     nameCompany: 'AGENCIA DROI',
@@ -27,7 +27,7 @@ const dataJobs = [
     subPosition: 'Lider tecnico del equipo de desarrollo',
   },
   {
-    date: 'Septiembre/18 - Junio/21',
+    date: 'Sep 2018 - Jun 2021',
     description:
       'Participé en el desarrollo del producto principal de la empresa, implementando nuevas tecnologías y buenas prácticas de programación para mejorar su calidad y funcionalidad.',
     nameCompany: 'AGENCIA DROI',
@@ -37,21 +37,24 @@ const dataJobs = [
 ]
 ---
 
-<h1 class="text-5xl font-semibold">Experiencia</h1>
-<section id="experience" class="flex flex-col gap-12 mt-10 mb-14">
-  {
-    dataJobs.map(
-      ({ date, description, nameCompany, position, subPosition }) => {
-        return (
-          <InfoBox
-            date={date}
-            description={description}
-            nameCompany={nameCompany}
-            position={position}
-            subPosition={subPosition}
-          />
-        )
-      }
-    )
-  }
+<section id="experience" class="lg:w-[60%] md:m-auto">
+  <!-- <div class="pt-10 border-t-2 border-white w-3/4 m-auto"></div> -->
+  <h1 class="text-5xl font-semibold">Experiencia</h1>
+  <div class="flex flex-col gap-12 mt-10 mb-14">
+    {
+      dataJobs.map(
+        ({ date, description, nameCompany, position, subPosition }) => {
+          return (
+            <InfoBox
+              date={date}
+              description={description}
+              nameCompany={nameCompany}
+              position={position}
+              subPosition={subPosition}
+            />
+          )
+        },
+      )
+    }
+  </div>
 </section>
