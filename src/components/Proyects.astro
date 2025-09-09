@@ -9,7 +9,6 @@ const dataProyects = [
     participation:
       'He sido desarrollador y lider tecnico del pryecto ELAMT, gestionando el equipo de desarrollo y asegurando la calidad del código. Implementando nuevas funcionalidades y optimizando el rendimiento de la plataforma. ',
     image: 'elamt',
-    imageSize: 'web',
     languages: ['React', 'TypeScript', 'postgreSQL', 'CSS', 'JavaScript', 'C#', '.NET', 'gitlab', 'CI/CD'],
     link: 'https://gciamt.org/plataformaElearning/'
   },
@@ -20,7 +19,6 @@ const dataProyects = [
     participation:
       'He sido parte del equipo de desarrollo de la plataforma web de Expo Bosques, grantizando su integración con la utilización de una API centralizada. Cumpliendo con las espectativas del cliente.',
     image: 'expobosques-2',
-    imageSize: 'web',
     languages: ['React', 'TypeScript', 'postgreSQL', 'CSS', 'JavaScript', 'Slim', 'php'],
     link: 'https://expobosquescol.com/',
   },
@@ -31,7 +29,6 @@ const dataProyects = [
     participation:
       'He participado en el desarrollo de la aplicación móvil de Colsanitas, donde contribuí a la migración de la aplicación a React Native 0.70 y al mejoramiento de los tiempos de acceso a Mi Salud Digital.',
     image: 'colsanitas',
-    imageSize: 'mobile',
     languages: ['React Native', 'TypeScript', 'Firebase'],
     link: ''
   },
@@ -42,7 +39,6 @@ const dataProyects = [
     participation:
       'He participado activamente en la colaboración de este proyecto, buscando mejorar y fortalecer mis habilidades de desarrollo. A través de esta experiencia, he tenido la oportunidad de explorar y dominar nuevas tecnologías.',
     image: 'weather',
-    imageSize: 'mobile',
     languages: ['React JS', 'Vite', 'TypeScript', 'CSS'],
     link: ''
   },
@@ -53,7 +49,6 @@ const dataProyects = [
     participation:
       'He participado en el desarrollo completo de la página de BioFix, centrándome especialmente en la creación de la calculadora utilizando React para mejorar la experiencia del usuario.',
     image: 'biofix',
-    imageSize: 'web',
     languages: ['React JS', 'CSS'],
     link: ''
   },
@@ -64,7 +59,6 @@ const dataProyects = [
     participation:
       'He sido parte del equipo de desarrollo de la plataforma web de Expo Bosques, garantizando su integración fluida con la aplicación móvil mediante la utilización de una API centralizada. Cumpliendo con las espectativas del cliente.',
     image: 'expobosques',
-    imageSize: 'web',
     languages: ['React Native', 'php', 'Slim', 'JavaScript', 'HTLM', 'CSS'],
     link: ''
   },
@@ -75,7 +69,6 @@ const dataProyects = [
     participation:
       'Contribuí a mejorar el rendimiento del proyecto mediante optimizaciones en la base de datos y en el código nativo, aplicando buenas prácticas de programación.',
     image: 'gesadmin',
-    imageSize: 'web',
     languages: ['php', 'MySql', 'CSS', 'HTML', 'JavaScript'],
     link: ''
   },
@@ -87,7 +80,7 @@ const dataProyects = [
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-5">
   {
     dataProyects.map(
-      ({ name, description, participation, image, languages, imageSize }) => {
+      ({ name, description, participation, image, languages, link }) => {
         return (
           <ProyectCard
             name={name}
@@ -95,7 +88,7 @@ const dataProyects = [
             participation={participation}
             image={image}
             languages={languages}
-            imageSize={imageSize}
+            link={link}
           />
         )
       }
