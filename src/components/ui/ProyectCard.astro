@@ -4,11 +4,11 @@ interface Props {
   description: string
   participation: string
   image: string
-  imageSize: string
   languages: string[]
+  link: string
 }
 
-const { name, description, participation, image, languages, imageSize } =
+const { name, description, participation, image, languages, link } =
   Astro.props
 ---
 
@@ -16,7 +16,7 @@ const { name, description, participation, image, languages, imageSize } =
   class="bg-[#4141414d] border-solid border border-[#5b5b5b33] rounded-md shadow-[0px_1px_20px_0px_#00000094] backdrop-blur-sm p-6"
 >
   <h3 class="text-center text-3xl font-semibold mb-2">{name}</h3>
-  <p class="text-sm font-light leading-4 h-11 text-pretty overflow-hidden">
+  <p class="text-sm font-light leading-4 h-20 text-pretty overflow-hidden">
     {description}
   </p>
   <img

@@ -3,14 +3,34 @@ import ProyectCard from '../components/ui/ProyectCard.astro'
 
 const dataProyects = [
   {
+    name: 'ELAMT',
+    description:
+      'Plataforma web LMS (Learning Management System) desarrollada para la gestión y administración de cursos en línea. De la Escuela Latinoamericana de Medicina Transfucional.',
+    participation:
+      'He sido desarrollador y lider tecnico del pryecto ELAMT, gestionando el equipo de desarrollo y asegurando la calidad del código. Implementando nuevas funcionalidades y optimizando el rendimiento de la plataforma. ',
+    image: 'elamt',
+    languages: ['React', 'TypeScript', 'postgreSQL', 'CSS', 'JavaScript', 'C#', '.NET', 'gitlab', 'CI/CD'],
+    link: 'https://gciamt.org/plataformaElearning/'
+  },
+  {
+    name: 'Expo bosques 2.0',
+    description:
+      'Expo Bosques es una plataforma web desarrollada para exhibir los proyectos llevados a cabo por el proyecto ProBosques.',
+    participation:
+      'He sido parte del equipo de desarrollo de la plataforma web de Expo Bosques, grantizando su integración con la utilización de una API centralizada. Cumpliendo con las espectativas del cliente.',
+    image: 'expobosques-2',
+    languages: ['React', 'TypeScript', 'postgreSQL', 'CSS', 'JavaScript', 'Slim', 'php'],
+    link: 'https://expobosquescol.com/',
+  },
+  {
     name: 'App Colsanitas',
     description:
       'La aplicación Colsanitas fue desarrollada para ayudar a los usuarios a agilizar trámites relacionados con su servicio de salud.',
     participation:
       'He participado en el desarrollo de la aplicación móvil de Colsanitas, donde contribuí a la migración de la aplicación a React Native 0.70 y al mejoramiento de los tiempos de acceso a Mi Salud Digital.',
     image: 'colsanitas',
-    imageSize: 'mobile',
     languages: ['React Native', 'TypeScript', 'Firebase'],
+    link: ''
   },
   {
     name: 'Weather APP',
@@ -19,8 +39,8 @@ const dataProyects = [
     participation:
       'He participado activamente en la colaboración de este proyecto, buscando mejorar y fortalecer mis habilidades de desarrollo. A través de esta experiencia, he tenido la oportunidad de explorar y dominar nuevas tecnologías.',
     image: 'weather',
-    imageSize: 'mobile',
     languages: ['React JS', 'Vite', 'TypeScript', 'CSS'],
+    link: ''
   },
   {
     name: 'Calculadora BioFix',
@@ -29,8 +49,8 @@ const dataProyects = [
     participation:
       'He participado en el desarrollo completo de la página de BioFix, centrándome especialmente en la creación de la calculadora utilizando React para mejorar la experiencia del usuario.',
     image: 'biofix',
-    imageSize: 'web',
     languages: ['React JS', 'CSS'],
+    link: ''
   },
   {
     name: 'Expo Bosques',
@@ -39,8 +59,8 @@ const dataProyects = [
     participation:
       'He sido parte del equipo de desarrollo de la plataforma web de Expo Bosques, garantizando su integración fluida con la aplicación móvil mediante la utilización de una API centralizada. Cumpliendo con las espectativas del cliente.',
     image: 'expobosques',
-    imageSize: 'web',
     languages: ['React Native', 'php', 'Slim', 'JavaScript', 'HTLM', 'CSS'],
+    link: ''
   },
   {
     name: 'Gesadmin',
@@ -49,18 +69,18 @@ const dataProyects = [
     participation:
       'Contribuí a mejorar el rendimiento del proyecto mediante optimizaciones en la base de datos y en el código nativo, aplicando buenas prácticas de programación.',
     image: 'gesadmin',
-    imageSize: 'web',
     languages: ['php', 'MySql', 'CSS', 'HTML', 'JavaScript'],
+    link: ''
   },
 ]
 ---
 
-<section id="proyects" class="xl:w-[60%] md:mx-auto mt-12">
+<section id="proyects" class="w-full max-w-6xl md:mx-auto mt-12">
   <h1 class="text-5xl font-semibold">Proyectos</h1>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-5">
   {
     dataProyects.map(
-      ({ name, description, participation, image, languages, imageSize }) => {
+      ({ name, description, participation, image, languages, link }) => {
         return (
           <ProyectCard
             name={name}
@@ -68,7 +88,7 @@ const dataProyects = [
             participation={participation}
             image={image}
             languages={languages}
-            imageSize={imageSize}
+            link={link}
           />
         )
       }
