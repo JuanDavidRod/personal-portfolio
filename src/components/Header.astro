@@ -1,8 +1,9 @@
 <header class="px-5">
   <nav class="w-full">
     <ul
-      class="hidden mt-8 rounded-2xl justify-center items-center font-semibold py-3 w-full
-      max-w-4xl mx-auto md:flex md:gap-20 md:text-lg
+      class="flex flex-col my-8 gap-6 rounded-2xl justify-center items-center font-semibold py-3 w-full
+      max-w-4xl mx-auto 
+      md:flex md:gap-20 md:text-lg md:flex-row
       text-white bg-gradient-to-r from-[#603ce0] from-0% via-[#355eab] via-15% to-[#2280a5] to-100%"
     >
       <li class="divider">
@@ -36,7 +37,12 @@
 
   @media (max-width: 640px) {
     ul > li.divider::after {
-      display: none;
+      position: absolute;
+      height: 1px;
+      width: 100px;
+      top: 135%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 </style>
